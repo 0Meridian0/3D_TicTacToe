@@ -10,7 +10,7 @@ internal static class Program
 
         for (int i = 1; i <= 2; i++)
         {
-            Console.WriteLine($"Игрок номер {i}\nУкажите свое имя");
+            GameWriter.PrintSetNickName(i);
 
             players.Add(
                 new Player 
@@ -18,7 +18,7 @@ internal static class Program
                     Name = Console.ReadLine() 
                 });
         }
-        var turnOrder = PrioritySetter.RandomPriotizeTurns(players);
+        var turnOrder = PrioritySetter.GetPriotize(players);
 
         GameFlow(turnOrder, matrix);
     }
@@ -28,9 +28,12 @@ internal static class Program
         var flag = false;
         CheckAnswer gameEnd;
 
+        GameWriter.PrintMatrix(matrix);
+
         while (true)
         {
-            var player = GameWriter.PrintWhoseTurn(flag, playersTurn);
+            var player = !flag ? playersTurn[0] : playersTurn[1];
+            GameWriter.PrintWhoseTurn(player);
 
             var move = PlayerMovement.SetMove(matrix);
 

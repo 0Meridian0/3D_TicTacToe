@@ -11,7 +11,7 @@ public static class PlayerMovement
             {
                 return move;
             }
-            Console.WriteLine("\n#####\nError\n#####\nКлетка уже занята.\n");
+            GameWriter.PrintWrongCell();
         }
     }
 

@@ -2,9 +2,35 @@
 
 public static class PrioritySetter
 {
+    public static List<Player> GetPriotize(List<Player> players)
+    {
+        GameWriter.PrintPlayersPriority();
+
+        var playersTurn = new List<Player>();
+        var priority = Console.ReadLine();
+
+        switch (priority)
+        {
+            case "1":
+                playersTurn = PersonalPriotizeTurns(players);
+                break;
+
+            case "2":
+                playersTurn = RandomPriotizeTurns(players);
+                break;
+
+            default:
+                GameWriter.PrintWrongNumber();
+                GetPriotize(players);
+                break;
+        }
+
+        return playersTurn;
+    }
+
     public static List<Player> PersonalPriotizeTurns(List<Player> players)
     {
-        Console.WriteLine("Укажите игрока, который будет ходить первым 1/2");
+        GameWriter.PrintChoisePriority();
         string turn;
 
         while (true)

@@ -1,4 +1,5 @@
-﻿using TicTacToe3D;
+﻿using System.Reflection.PortableExecutable;
+using TicTacToe3D;
 
 public static class GameWriter
 {
@@ -18,12 +19,34 @@ public static class GameWriter
         }
     }
 
-    public static Player PrintWhoseTurn(bool flag, List<Player> playersTurn)
+    public static void PrintSetNickName(int i)
     {
-        var player = !flag ? playersTurn[0] : playersTurn[1];
-        Console.WriteLine("\n======================================\nХод игрока " + player.Name);
+        Console.WriteLine($"Игрок номер {i}\nУкажите свое имя");
+    }
 
-        return player;
+    public static void PrintChoisePriority()
+    {
+        Console.WriteLine("\nУкажите игрока, который будет ходить первым 1/2");
+    }
+
+    public static void PrintPlayersPriority()
+    {
+        Console.WriteLine("\nВыберите как будет определяться очередность ходов игроков:\n1) Указать вручную\n2) Подкинуть монетку\nУкажите цифру в зависимости от выбора");
+    }
+
+    public static void PrintWrongNumber()
+    {
+        Console.WriteLine("\n#####\nError\n#####\nУказано неверная цифра");
+    }
+
+    public static void PrintWrongCell()
+    {
+        Console.WriteLine("\n#####\nError\n#####\nКлетка уже занята.\n");
+    }
+
+    public static void PrintWhoseTurn(Player player)
+    {
+        Console.WriteLine("\n======================================\nХод игрока " + player.Name);
     }
 
     public static void PrintWinner(CheckAnswer gameEnd, List<Player> playersTurn)
