@@ -21,8 +21,7 @@ public static class PrioritySetter
 
             default:
                 GameWriter.PrintWrongNumber();
-                GetPriotize(players); // bug with getting choise FactRes "/2" -> error
-                break;
+                return GetPriotize(players);
         }
 
         return playersTurn;
