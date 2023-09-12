@@ -41,9 +41,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\MatrixGeneration.cs" />
+     <Compile Include="Assets\Scripts\MatrixGeneration.cs" />
+     <Compile Include="Assets\Scripts\Row.cs" />
+     <Compile Include="Assets\Scripts\Cut.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets\Prefabs" />
+     <Folder Include="Assets\Material" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Scripts" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.48f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

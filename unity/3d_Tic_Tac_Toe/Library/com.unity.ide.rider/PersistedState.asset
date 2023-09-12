@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: Unity.Rider.Editor:Packages.Rider.Editor:RiderScriptEditorPersistedState
-  lastWriteTicks: -8585075118539306472
-  manifestJsonLastWriteTicks: 0
+  lastWriteTicks: -8585070931370623678
+  manifestJsonLastWriteTicks: -8585075119322877761
