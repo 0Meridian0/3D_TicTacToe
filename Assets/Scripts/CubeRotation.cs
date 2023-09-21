@@ -1,9 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CubeRotation : MonoBehaviour
 {
-    [SerializeField] private GameObject target;
+    private GameObject target;
 
     private Vector2 _fPressPos;
     private Vector2 _sPressPos;
@@ -14,11 +13,22 @@ public class CubeRotation : MonoBehaviour
 
     private const float SPEED = 200f;
 
+    private void Start()
+    {
+        target = new GameObject("target")
+        {
+            transform =
+            {
+                position = new Vector3(0, 0, 0),
+                rotation = new Quaternion(0, 0, 0, 0)
+            }
+        };
+    }
+
     private void Update()
     {
         Swipe();
         Drag();
-        
     }
 
     private void Drag()
@@ -60,23 +70,23 @@ public class CubeRotation : MonoBehaviour
         {
             target.transform.Rotate(0, -90, 0, Space.World);
         }
-        
+
         else if (UpLeftSwipe())
         {
-            target.transform.Rotate(90,0,0,Space.World);
+            target.transform.Rotate(90, 0, 0, Space.World);
         }
         else if (UpRightSwipe())
         {
-            target.transform.Rotate(0,0,90,Space.World);
+            target.transform.Rotate(0, 0, 90, Space.World);
         }
-        
+
         else if (DownLeftSwipe())
         {
-            target.transform.Rotate(-90,0,0,Space.World);
+            target.transform.Rotate(-90, 0, 0, Space.World);
         }
         else if (DownRightSwipe())
         {
-            target.transform.Rotate(0,0,-90,Space.World);
+            target.transform.Rotate(0, 0, -90, Space.World);
         }
     }
 
