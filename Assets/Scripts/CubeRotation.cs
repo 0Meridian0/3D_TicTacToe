@@ -35,8 +35,8 @@ public class CubeRotation : MonoBehaviour
     {
         if (Input.GetMouseButton(1))
         {
-            _dragDeltaPos = Input.mousePosition - _dragPrevPos;
-            _dragDeltaPos *= 0.1f;
+            _dragDeltaPos = (Input.mousePosition - _dragPrevPos).normalized;
+            _dragDeltaPos *= 2.5f;
             transform.rotation = Quaternion.Euler(_dragDeltaPos.y, -_dragDeltaPos.x, 0) * transform.rotation;
         }
         else
