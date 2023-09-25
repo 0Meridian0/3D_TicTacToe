@@ -9,7 +9,7 @@ public class Entity : MonoBehaviour
     {
         for (var i = 0; i < 4; i++)
         {
-            ent.position = i + 1;
+            ent.position = i;
             Instantiate(ent, parent);
         }
     }
