@@ -8,8 +8,6 @@ public class Game : MonoBehaviour
     private List<Player> _players;
     private bool _playerTurn = false;
     
-    //TODO сделать GUI
-    
     private void OnEnable()
     {
         Cell.OnClickedCell += CheckPlayerMovement;
@@ -22,8 +20,6 @@ public class Game : MonoBehaviour
 
     private void Start()
     {
-        //TODO генерация поля и пользователей
-        
         _matrix = GenerateMatrix(4);
         _players = new List<Player>
         {
@@ -70,13 +66,9 @@ public class Game : MonoBehaviour
 
         var player = !_playerTurn ? _players[0] : _players[1];
         _matrix[cord.Cut][cord.Row][cord.Col] = player.Symbol;
-        cell.GetComponent<Renderer>().material.color = player.Symbol == "X" ? Color.black : Color.grey;
+        cell.GetComponent<Renderer>().material.color = player.Symbol == "X" ? Color.black : Color.red;
 
         _playerTurn = !_playerTurn;
-
-        
-        // TODO Сделать ответ конечным! Что игра закончилась
-        // TODO Перекрашивать победный ход для большей наглядности
         
         _gameEnd = CubeCutChecker.CheckCut(_matrix);
         if (_gameEnd != CheckAnswer.GameNotOver)

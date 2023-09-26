@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Row.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Prefabs" />
+     <None Include="Assets\Scripts\ListTODO.txt" />
      <Folder Include="Assets\Material" />
      <Folder Include="Assets\Scenes" />
      <Folder Include="Assets\Scripts" />
