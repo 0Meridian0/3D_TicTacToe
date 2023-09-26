@@ -114,4 +114,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entity: {fileID: 886943292962018503}
-  position: 4
+  material: {fileID: 2100000, guid: a41d21169d89b594ca0398e1207baef4, type: 2}
+  position: 3

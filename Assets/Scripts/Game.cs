@@ -64,17 +64,19 @@ public class Game : MonoBehaviour
         return cube;
     }
     
-    private void CheckPlayerMovement(Coordinates cord)
+    private void CheckPlayerMovement(Coordinates cord, Cell cell)
     {
         if(_matrix[cord.Cut][cord.Row][cord.Col] != ".") return;
 
         var player = !_playerTurn ? _players[0] : _players[1];
         _matrix[cord.Cut][cord.Row][cord.Col] = player.Symbol;
+        cell.GetComponent<Renderer>().material.color = player.Symbol == "X" ? Color.black : Color.grey;
 
         _playerTurn = !_playerTurn;
 
         
         // TODO Сделать ответ конечным! Что игра закончилась
+        // TODO Перекрашивать победный ход для большей наглядности
         
         _gameEnd = CubeCutChecker.CheckCut(_matrix);
         if (_gameEnd != CheckAnswer.GameNotOver)

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class CubeCutChecker
 {
@@ -23,8 +24,6 @@ public class CubeCutChecker
             {
                 return answer;
             }
-
-            return CheckAnswer.GameNotOver;
         }
 
         return CheckAnswer.GameNotOver;
@@ -57,13 +56,12 @@ public class CubeCutChecker
 
     public static CheckAnswer CheckColumn(List<List<string>> cut)
     {
-        var columnLen = cut.Count;
-        for (int i = 0; i < columnLen; i++)
+        for (int i = 0; i < cut.Count; i++)
         {
             var isSingleCharacterColumn = true;
             var fSymbol = cut[0][i];
 
-            for (int j = 0; j < columnLen; j++)
+            for (int j = 0; j < cut.Count; j++)
             {
                 if (cut[j][i] == "." || fSymbol != cut[j][i])
                 {
@@ -120,7 +118,7 @@ public class CubeCutChecker
         if (fSymbol == ".")
             return CheckAnswer.GameNotOver;
 
-        for (int i = n; i > 0; i--)
+        for (int i = n; i >= 0; i--)
         {
             if (fSymbol != cut[j][i])
             {

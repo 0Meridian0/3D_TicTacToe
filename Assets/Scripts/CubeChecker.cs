@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class CubeChecker
 {
@@ -89,8 +90,18 @@ public class CubeChecker
 
             var answer = CubeCutChecker.CheckColumn(edgeCut);
 
-            return answer != CheckAnswer.GameNotOver ? answer :
-                   CubeCutChecker.CheckDiagonal(edgeCut);
+            if (answer != CheckAnswer.GameNotOver)
+            {
+                return answer;
+            }
+            else
+            {
+                answer = CubeCutChecker.CheckDiagonal(edgeCut);
+                if (answer != CheckAnswer.GameNotOver)
+                {
+                    return answer;
+                }
+            }
         }
 
         return CheckAnswer.GameNotOver;
@@ -114,8 +125,18 @@ public class CubeChecker
 
             var answer = CubeCutChecker.CheckColumn(edgeCut);
 
-            return answer != CheckAnswer.GameNotOver ? answer :
-                   CubeCutChecker.CheckDiagonal(edgeCut);
+            if (answer != CheckAnswer.GameNotOver)
+            {
+                return answer;
+            }
+            else
+            {
+                answer = CubeCutChecker.CheckDiagonal(edgeCut);
+                if (answer != CheckAnswer.GameNotOver)
+                {
+                    return answer;
+                }
+            }
         }
 
         return CheckAnswer.GameNotOver;

@@ -41,18 +41,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CubeChecker.cs" />
      <Compile Include="Assets\Scripts\Cell.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Coordinates.cs" />
      <Compile Include="Assets\Scripts\CubeRotation.cs" />
+     <Compile Include="Assets\Scripts\CubeCutChecker.cs" />
      <Compile Include="Assets\Scripts\Entity.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\Cube.cs" />
      <Compile Include="Assets\Scripts\Cut.cs" />
-     <Compile Include="Assets\Scripts\Row.cs" />
-     <Compile Include="Assets\Scripts\Coordinates.cs" />
-     <Compile Include="Assets\Scripts\CubeCutChecker.cs" />
-     <Compile Include="Assets\Scripts\CubeChecker.cs" />
      <Compile Include="Assets\Scripts\CheckAnswer.cs" />
+     <Compile Include="Assets\Scripts\Row.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Material" />
