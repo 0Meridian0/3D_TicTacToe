@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    private List<List<List<string>>> _matrix;
+    [SerializeField] private Cube gameCube;
+    
+    private static List<List<List<string>>> _matrix;
     private CheckAnswer _gameEnd;
-    private List<Player> _players;
+    private static List<Player> _players;
     private bool _playerTurn = false;
     
     private void OnEnable()
@@ -18,9 +20,12 @@ public class Game : MonoBehaviour
         Cell.OnClickedCell -= CheckPlayerMovement;
     }
 
-    private void Start()
+    public void StartGame(int size)
     {
-        _matrix = GenerateMatrix(4);
+        Entity.SideSize = size;
+        Instantiate(gameCube);
+        
+        _matrix = GenerateMatrix(size);
         _players = new List<Player>
         {
             new Player

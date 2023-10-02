@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entity: {fileID: 7989632460474751462, guid: e52b6de2f715c2e42bb94b37d4b59db4, type: 3}
   position: 0
+  sideSize: 3
 --- !u!114 &7242500389232384247
 MonoBehaviour:
   m_ObjectHideFlags: 0

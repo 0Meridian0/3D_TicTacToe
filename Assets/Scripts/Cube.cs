@@ -1,6 +1,8 @@
-﻿public class Cube : Entity
+﻿using UnityEngine.UIElements;
+
+public class Cube : Entity
 {
-    private void Start()
+    void Start()
     {
         Generate(this.transform, entity);
     }
