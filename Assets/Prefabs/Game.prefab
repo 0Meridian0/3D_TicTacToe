@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameCube: {fileID: 6181860903033486999, guid: 5827b588e76e61244922336d908ca7f0, type: 3}
+  target: {fileID: 7585541736233490187, guid: 335f31d274e6804448b4475f565b52f8, type: 3}
+  layoutGroup: {fileID: 1185890366755084537, guid: 5827b588e76e61244922336d908ca7f0, type: 3}
+  endGamePanel: {fileID: 0}
+  winnerWindowText: {fileID: 0}

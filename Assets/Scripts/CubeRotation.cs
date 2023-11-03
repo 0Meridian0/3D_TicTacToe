@@ -2,7 +2,7 @@
 
 public class CubeRotation : MonoBehaviour
 {
-    private GameObject target;
+    public static GameObject Target { get; private set; }
 
     private Vector2 _fPressPos;
     private Vector2 _sPressPos;
@@ -15,7 +15,7 @@ public class CubeRotation : MonoBehaviour
 
     private void Start()
     {
-        target = new GameObject("target")
+        Target = new GameObject("Target")
         {
             transform =
             {
@@ -33,7 +33,7 @@ public class CubeRotation : MonoBehaviour
 
     private void Drag()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(2))
         {
             _dragDeltaPos = (Input.mousePosition - _dragPrevPos).normalized;
             _dragDeltaPos *= 2.5f;
@@ -41,9 +41,9 @@ public class CubeRotation : MonoBehaviour
         }
         else
         {
-            if (transform.rotation == target.transform.rotation) return;
+            if (transform.rotation == Target.transform.rotation) return;
             var step = SPEED * Time.deltaTime;
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, target.transform.rotation, step);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Target.transform.rotation, step);
         }
 
         _dragPrevPos = Input.mousePosition;
@@ -64,29 +64,29 @@ public class CubeRotation : MonoBehaviour
 
         if (LeftSwipe())
         {
-            target.transform.Rotate(0, 90, 0, Space.World);
+            Target.transform.Rotate(0, 90, 0, Space.World);
         }
         else if (RightSwipe())
         {
-            target.transform.Rotate(0, -90, 0, Space.World);
+            Target.transform.Rotate(0, -90, 0, Space.World);
         }
 
         else if (UpLeftSwipe())
         {
-            target.transform.Rotate(90, 0, 0, Space.World);
+            Target.transform.Rotate(90, 0, 0, Space.World);
         }
         else if (UpRightSwipe())
         {
-            target.transform.Rotate(0, 0, 90, Space.World);
+            Target.transform.Rotate(0, 0, 90, Space.World);
         }
 
         else if (DownLeftSwipe())
         {
-            target.transform.Rotate(-90, 0, 0, Space.World);
+            Target.transform.Rotate(-90, 0, 0, Space.World);
         }
         else if (DownRightSwipe())
         {
-            target.transform.Rotate(0, 0, -90, Space.World);
+            Target.transform.Rotate(0, 0, -90, Space.World);
         }
     }
 

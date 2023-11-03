@@ -1,10 +1,17 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
     [SerializeField] private Cube gameCube;
-    
+    [SerializeField] private VerticalLayoutGroup layoutGroup;
+    [SerializeField] private GameObject endGamePanel;
+    [SerializeField] private TextMeshProUGUI winnerWindowText;
+
+    public Cube InstCube { get; private set; }
+
     private static List<List<List<string>>> _matrix;
     private CheckAnswer _gameEnd;
     private static List<Player> _players;
@@ -23,7 +30,9 @@ public class Game : MonoBehaviour
     public void StartGame(int size)
     {
         Entity.SideSize = size;
-        Instantiate(gameCube);
+        layoutGroup.spacing = size > 4 ? -2.5f : 0f;
+        
+        InstCube = Instantiate(gameCube);
         
         _matrix = GenerateMatrix(size);
         _players = new List<Player>
@@ -78,15 +87,21 @@ public class Game : MonoBehaviour
         _gameEnd = CubeCutChecker.CheckCut(_matrix);
         if (_gameEnd != CheckAnswer.GameNotOver)
         {
+            EndWindow(player);
             Debug.Log($"Победа {_gameEnd}");
-            return;
         }
 
         _gameEnd = CubeChecker.CheckCube(_matrix);
         if (_gameEnd != CheckAnswer.GameNotOver)
         {
+            EndWindow(player);
             Debug.Log($"Победа {_gameEnd}");
-            return;
         }
+    }
+
+    public void EndWindow(Player winner)
+    {
+        endGamePanel.SetActive(true);
+        winnerWindowText.text = "Winner is " + winner.Name;
     }
 }
