@@ -806,4 +806,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "C:/Users/aasmirnov/Desktop/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430/3d_Tic_Tac_Toe.exe"
+  playerPath: C:/Users/aasmirnov/Desktop/3D_TicTacToe/BuildedGame/3d_Tic_Tac_Toe.exe
