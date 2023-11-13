@@ -11,6 +11,7 @@ public class Game : MonoBehaviour
     [SerializeField] private TextMeshProUGUI winnerWindowText;
 
     public Cube InstCube { get; private set; }
+    public int SavedSize { get; set; }
 
     private static List<List<List<string>>> _matrix;
     private CheckAnswer _gameEnd;

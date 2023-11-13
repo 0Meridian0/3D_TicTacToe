@@ -4,18 +4,17 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Game game;
 
-    private int savedSize;
     
     public void PlayGame(int size)
     {
-        savedSize = size;
+        game.SavedSize = size;
         game.StartGame(size);
     }
 
     public void Restart()
     {
         GoToMenu();
-        PlayGame(savedSize);
+        PlayGame(game.SavedSize);
     }
     
     public void GoToMenu()
