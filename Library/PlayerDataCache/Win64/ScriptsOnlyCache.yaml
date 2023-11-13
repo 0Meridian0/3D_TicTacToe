@@ -77,41 +77,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1470}
     - Class: 114
-      Script: {instanceID: 1552}
+      Script: {instanceID: 1472}
     - Class: 114
-      Script: {instanceID: 1916}
+      Script: {instanceID: 1554}
     - Class: 114
-      Script: {instanceID: 2322}
+      Script: {instanceID: 1918}
     - Class: 114
-      Script: {instanceID: 2408}
+      Script: {instanceID: 2324}
     - Class: 114
-      Script: {instanceID: 2604}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2816}
+      Script: {instanceID: 2606}
     - Class: 114
-      Script: {instanceID: 2898}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 3150}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 3204}
+      Script: {instanceID: 3152}
     - Class: 114
-      Script: {instanceID: 3420}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3458}
+      Script: {instanceID: 3422}
     - Class: 114
-      Script: {instanceID: 3588}
+      Script: {instanceID: 3460}
     - Class: 114
-      Script: {instanceID: 3824}
+      Script: {instanceID: 3590}
     - Class: 114
-      Script: {instanceID: 3894}
+      Script: {instanceID: 3826}
     - Class: 114
-      Script: {instanceID: 3968}
+      Script: {instanceID: 3896}
     - Class: 114
-      Script: {instanceID: 3996}
+      Script: {instanceID: 3970}
     - Class: 114
-      Script: {instanceID: 4024}
+      Script: {instanceID: 3998}
     - Class: 114
       Script: {instanceID: 4092}
     - Class: 115
@@ -143,6 +143,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -755,12 +761,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: Benchmark04
-  - hash:
-      serializedVersion: 2
-      Hash: 69415240821be7986b27e72bf9609a30
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
